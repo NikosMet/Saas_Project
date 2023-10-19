@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
 
 
 export default function Page()
@@ -6,8 +7,7 @@ export default function Page()
 	return (
 <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
 	  <Head>
-		<title>hhh</title>
-		<link rel="icon" href="/favicon.ico" />
+		<title>Home</title>
 	  </Head>
 
 	<main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
@@ -17,7 +17,7 @@ export default function Page()
 			<span className="text-green-500">Ebook</span>Store
 		  </div>
 		  <div className="py-10">
-			<h2 className="text-3xl font-bold text-green-500 mb-2">Sign in to account</h2>
+			<h2 className="text-3xl font-bold text-green-500 mb-2">Login to account</h2>
 			<div className="border-2 w-10 border-green-500 inline-block mb-2"></div>
 			<div className="flex justify-center my-2">
 			
@@ -43,8 +43,8 @@ export default function Page()
 		  <h2 className="text-3xl font-bold mb-2">Hello, Friend!</h2>
 		  <div className="border-2 w-10 cborder-white inline-block mb-2"></div>
 		  <p className= "mb-2">Fill up personal information and start journey with us!!</p>
-		  <a href="a" className="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-green-500">
-			Sign Up</a>
+		  <Link href="signup" className="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-green-500">
+			Sign Up</Link>
 		  </div>
 		   {/*sign up section*/}
 	  </div>
