@@ -5,7 +5,7 @@ from django.db.models import Avg
 
 class Account(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    shopping_cart = models.ForeignKey('Book', blank=True, on_delete=models.CASCADE)
+    shopping_cart = models.ForeignKey('Book', null=True,blank=True, on_delete=models.CASCADE)
     transaction = models.OneToOneField('Transaction', related_name='account', on_delete=models.CASCADE,null=True, blank=True)
     transactions_history = models.ForeignKey('Transaction', related_name='account_history', on_delete=models.CASCADE,null=True, blank=True)
     rated_books = models.ForeignKey('Feedback', related_name='account_rated_books', on_delete=models.CASCADE,null=True, blank=True)
@@ -16,19 +16,19 @@ class Account(models.Model):
         return self.user.username
 
 class Book(models.Model):
-    owner = models.ManyToManyField(Account)
+    owner = models.ManyToManyField(Account,null=True, blank=True)
     ISBN = models.CharField(max_length=18, default="", unique=True)
     Title = models.CharField(max_length=80, default="", unique=True)
     Authors = models.CharField(max_length=150, default="")
     Publisher = models.CharField(max_length=150, default="")
     Publication_Date = models.CharField(max_length=150, default="")
     Genre = models.CharField(max_length=100, default="")
-    Description = models.CharField(max_length=500, default="")
+    Description = models.CharField(max_length=10000, default="")
     Price = models.FloatField()
     Quantity_Stocks = models.CharField(max_length=150, default="")
     Language = models.CharField(max_length=150, default="")
     Reviews = models.ForeignKey('Feedback', on_delete=models.CASCADE, related_name="books",null=True, blank=True)
-    Synopsis = models.CharField(max_length=500, default="")
+    Synopsis = models.CharField(max_length=10000, default="")
     Ratings = models.ForeignKey('Feedback', on_delete=models.CASCADE, related_name="books_rated",null=True, blank=True)
     
     def __str__(self):
