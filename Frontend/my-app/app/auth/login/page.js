@@ -24,13 +24,13 @@ export default function Page()
 			</div>{/*Social Login section*/}
 
 			<div className="flex flex-col items-center">
-			  <div className="bg-gray-100 w-64 p-2">
+			  <div className="w-full rounded border border-gray-300 p-2">
 				<input type="email" name="email" placeholder="Email" />
 			  </div>  
 			</div>
 
 			<div className="flex flex-col items-center">
-			  <div className="bg-gray-100 w-64 p-2">
+			  <div className="w-full rounded border border-gray-300 p-2">
 				<input type="password" name="password" placeholder="Password" />
 			  </div>  
 			</div>
