@@ -1,9 +1,15 @@
+'use client'
 import Head from 'next/head';
 import Link from 'next/link';
-
+import Login_Button from '../../../components/Login_Button'
+import { useState } from 'react';
 
 export default function Page()
 {
+
+	const [username,setUsername] = useState('');
+	const [password,setPassword] = useState('')
+
 	return (
 <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
 	  <Head>
@@ -35,6 +41,7 @@ export default function Page()
 			  </div>  
 			</div>
 
+			{/* <Login_Button/> */}
 		  </div>
 		</div>
 		{/*sign in section*/}
