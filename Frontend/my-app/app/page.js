@@ -1,9 +1,11 @@
-// import Image from 'next/image';
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <h1 >Welcome to My Home Page</h1>
-    </div>
+    <main>
+      <div className="flex justify-center items-center h-screen">
+        <Hero/>
+      </div>
+    </main>
   );
 }
