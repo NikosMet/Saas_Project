@@ -30,9 +30,6 @@ const Navbar = () => {
                                         <li className='ml-10 uppercase hover:border-b text-xl text-green-500'>contact us</li>
                                 </Link>
                                 <Link href="/services">
-                                        <li className='ml-10 uppercase hover:border-b text-xl text-green-500'>Blog</li>
-                                </Link>
-                                <Link href="/services">
                                         <li className='mx-10 uppercase hover:border-b text-xl text-green-500'> Our services</li>
                                 </Link>
                           </ul>
